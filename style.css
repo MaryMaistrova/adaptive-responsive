@@ -81,3 +81,57 @@ h1 {
   padding-left: 135px;
   padding-top: 63px;
 }
+
+h2{
+  width: 1170px;
+  font-size: 48px;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: normal;
+  margin: auto;
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+article {
+  width: 1170px;
+  display: flex;
+  margin: auto;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.half {
+  margin: auto;
+}
+
+h6, p {
+  color: #7B7B7B;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+p::after {
+  content: url(images/Arrow\ 1.svg);
+  padding-left: 10px;
+}
+
+h3 {
+  font-size: 23px;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+#taone  {
+  width: 450px;
+  padding: 85px 120px 85px 30px;
+}
+
+#tasecond {
+  width: 450px;
+  padding: 85px 30px 85px 120px;
+}
+
+
