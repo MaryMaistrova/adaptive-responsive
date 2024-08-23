@@ -239,8 +239,9 @@ span {
 }
 
 footer {
-  width: 1440px;
+  width: 100%;
   margin: auto;
+  background-color: #F4F4F4;
 }
 
 .pain-in-the-ass {
@@ -252,22 +253,30 @@ footer {
 }
 
 .pain-in-the-ass>div {
-  width: 370px;
+  width: 350px;
 }
 
 footer h2 {
-  width: 370px;
+  width: 350px;
   padding-bottom: 0px;
 }
 
 footer h6, a {
   font-size: 16px;
   color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.pain-in-the-ass:nth-child(2) {
-  gap: 30px;
+.logos {
   display: flex;
+  width: 350px;
+  gap: 23px;
 }
 
-
+footer>h6 {
+  margin: auto;
+  width: 300px;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 12px;
+}
