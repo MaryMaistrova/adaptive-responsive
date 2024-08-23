@@ -196,6 +196,78 @@ span {
   justify-content: center;
   align-items: center;
   margin: 50px auto 90px;
+  border-style: none;
+}
+
+.additional {
+  display: flex;
+  margin: auto;
+  width: 1170px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container {
+  width: 470px;
+  margin: auto, none;
+}
+
+.container>h3, a {
+  font-size: 23px;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.container>a::after {
+  content: url(images/Arrow\ 1.svg);
+  position: absolute;
+  top: 30px;
+  right: 275px;
+}
+
+.container>a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.container>p {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+footer {
+  width: 1440px;
+  margin: auto;
+}
+
+.pain-in-the-ass {
+  width: 1170px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pain-in-the-ass>div {
+  width: 370px;
+}
+
+footer h2 {
+  width: 370px;
+  padding-bottom: 0px;
+}
+
+footer h6, a {
+  font-size: 16px;
+  color: black;
+}
+
+.pain-in-the-ass:nth-child(2) {
+  gap: 30px;
+  display: flex;
 }
 
 
