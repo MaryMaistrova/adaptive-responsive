@@ -7,6 +7,12 @@ header {
   padding-bottom: 40px;
 }
 
+@media (min-width: 321px) {
+  @media (max-width: 768px) {
+    
+    }
+  }
+
 nav {
   display: flex;
   gap: 84px;
@@ -20,6 +26,38 @@ ul {
   font-size: 14px;
   font-family: "Lato", Arial, sans-serif;
   text-transform: uppercase;
+}
+
+a:hover {
+  background-color: #99e9e9;
+  transition: 500ms;
+}
+
+a:not(:hover) {
+  background-color: #fff;
+  transition: 500ms;
+}
+
+li>a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+li>a:hover::after {
+  content: url(images/line.svg);
+  position: absolute;
+  top: 15px;
+  right: 9px;
+  transition: 1000ms;
+}
+
+li>a:not(:hover)::after {
+  content: url(images/line.svg);
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  filter: opacity(0%);
 }
 
 .try>* {
@@ -197,6 +235,7 @@ span {
   align-items: center;
   margin: 50px auto 90px;
   border-style: none;
+  cursor: pointer;
 }
 
 .additional {
@@ -272,6 +311,17 @@ footer h6, a {
   display: flex;
   width: 350px;
   gap: 23px;
+}
+
+.logos>img:hover {
+  background-color: #ccf2f5;
+  transition: 500ms; 
+  transform: scale(1.2);
+}
+
+.logos>img:not(:hover) {
+  transition: 500ms; 
+  transform: scale(0.9);
 }
 
 footer>h6 {
