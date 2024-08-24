@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 header {
   max-width: 1440px;
   display: flex;
@@ -6,12 +10,6 @@ header {
   justify-content: space-around;
   padding-bottom: 40px;
 }
-
-@media (min-width: 321px) {
-  @media (max-width: 768px) {
-    
-    }
-  }
 
 nav {
   display: flex;
@@ -42,23 +40,24 @@ li>a {
   text-decoration: none;
   color: black;
   position: relative;
+  transition: 500ms;
 }
 
-li>a:hover::after {
-  content: url(images/line.svg);
+li>a::after {
+  content: "";
   position: absolute;
-  top: 15px;
-  right: 9px;
-  transition: 1000ms;
+  top: 25px;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  transition: 500ms;
+  background-color: black;
 }
 
 li>a:not(:hover)::after {
-  content: url(images/line.svg);
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  filter: opacity(0%);
+  opacity: 0;
 }
+
 
 .try>* {
   box-sizing: border-box;
@@ -82,7 +81,7 @@ form.example button {
   color: black;
   font-size: 14px;
   border: none;
-  border-left: none; 
+  border-left: none;
   cursor: pointer;
 }
 
@@ -122,7 +121,7 @@ h1 {
   padding-top: 63px;
 }
 
-h2{
+h2 {
   width: 1170px;
   font-size: 48px;
   font-family: "Red Hat Display", Arial, sans-serif;
@@ -144,7 +143,8 @@ article {
   margin: auto;
 }
 
-h6, p {
+h6,
+p {
   color: #7B7B7B;
   font-family: "Lato", Arial, sans-serif;
   font-size: 16px;
@@ -164,7 +164,7 @@ h3 {
   line-height: 1.5em;
 }
 
-#taone  {
+#taone {
   width: 450px;
   padding: 85px 120px 85px 30px;
 }
@@ -251,7 +251,8 @@ span {
   margin: auto, none;
 }
 
-.container>h3, a {
+.container>h3,
+a {
   font-size: 23px;
   font-family: "Red Hat Display", Arial, sans-serif;
   text-decoration: none;
@@ -300,7 +301,8 @@ footer h2 {
   padding-bottom: 0px;
 }
 
-footer h6, a {
+footer h6,
+a {
   font-size: 16px;
   color: black;
   margin-top: 20px;
@@ -315,12 +317,12 @@ footer h6, a {
 
 .logos>img:hover {
   background-color: #ccf2f5;
-  transition: 500ms; 
+  transition: 500ms;
   transform: scale(1.2);
 }
 
 .logos>img:not(:hover) {
-  transition: 500ms; 
+  transition: 500ms;
   transform: scale(0.9);
 }
 
