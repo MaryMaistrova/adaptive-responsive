@@ -11,11 +11,16 @@ header {
   padding-bottom: 40px;
 }
 
+header img {
+  padding-top: 10px;
+}
+
 @media (max-width: 1100px) {
   header {
     max-width: 800px;
     padding-left: 34px;
     padding-right: 34px;
+    gap: 200px;
   }
 }
 
@@ -33,6 +38,111 @@ ul {
   font-size: 14px;
   font-family: "Lato", Arial, sans-serif;
   text-transform: uppercase;
+}
+
+@media (min-width: 1101px) {
+  .hambee, .sidebar {
+    display: none;
+    pointer-events: none;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .hambee {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    position: absolute;
+    right: 50px;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hambee input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .hambee::before,
+  .hambee::after,
+  .hambee input {
+    content: "";
+    width: 34px;
+    height: 4px;
+    transform-origin: left center;
+    background-color: black;
+    transition: 200ms ease-in-out;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hambee input:checked {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hambee:has(input:checked)::before {
+    rotate: 45deg;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hambee:has(input:checked)::after {
+    rotate: -45deg;
+  }
+}
+
+@media (max-width: 1100px) {
+  .sidebar nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 120px;
+    background-color: rgb(233, 247, 247);
+    position: absolute;
+    z-index: 1;
+    top: 62px;
+    right: 10px;
+    text-align: center;
+    translate: 129%;
+    transition: 200ms ease-in-out;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hambee:has(input:checked)+.sidebar {
+    translate: 0;
+    transition: 200ms ease-in-out;
+  }
+}
+
+.try {
+  position: absolute;
+  right: 100px;
+}
+
+@media (max-width: 1100px) {
+  .try {
+    position: absolute;
+    right: 100px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -204,6 +314,7 @@ p {
 }
 
 @media (max-width: 1100px) {
+
   h6,
   p {
     color: #7B7B7B;
@@ -283,8 +394,7 @@ h4 {
 
 @media (max-width: 1100px) {
   h4 {
-    width: 800px;
-    margin: auto;
+    width: 700px;
   }
 }
 
@@ -400,7 +510,7 @@ span {
 }
 
 @media (max-width: 1100px) {
-  .additional{
+  .additional {
     flex-direction: column;
     width: 700px;
     gap: 30px;
@@ -435,7 +545,7 @@ a {
 }
 
 @media (max-width: 1100px) {
-  .container:last-of-type{
+  .container:last-of-type {
     margin-left: auto;
     width: 500px;
   }
@@ -460,7 +570,7 @@ footer {
 }
 
 @media (max-width: 1100px) {
-  .pain-in-the-ass{
+  .pain-in-the-ass {
     display: flex;
     flex-direction: column;
     width: 700px;
