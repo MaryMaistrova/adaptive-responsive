@@ -3,16 +3,22 @@ body {
 }
 
 header {
-  max-width: 1440px;
+  max-width: 1140px;
   display: flex;
-  gap: 420px;
+  gap: 220px;
   margin: auto;
-  justify-content: space-around;
-  padding-bottom: 40px;
+  justify-content: flex-start;
+  padding: 0px 10px 40px;
 }
 
-header img {
+#bg-big {
   padding-top: 10px;
+}
+
+@media (max-width: 700px) {
+  #bg-big {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -23,7 +29,6 @@ header img {
     gap: 200px;
   }
 }
-
 
 nav {
   display: flex;
@@ -135,13 +140,19 @@ ul {
 
 .try {
   position: absolute;
-  right: 100px;
+  right: 50px;
 }
 
 @media (max-width: 1100px) {
   .try {
     position: absolute;
     right: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .try {
+    right: 30px;
   }
 }
 
@@ -182,7 +193,6 @@ li>a::after {
 li>a:not(:hover)::after {
   opacity: 0;
 }
-
 
 .try>* {
   box-sizing: border-box;
@@ -242,6 +252,15 @@ form.example::after {
   }
 }
 
+@media (max-width: 700px) {
+  .hero {
+    min-height: 500px;
+    background-image: url(images/bg-image-phone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 h1 {
   position: absolute;
   font-size: 48px;
@@ -258,6 +277,13 @@ h1 {
     width: 600px;
     padding-left: 30px;
     padding-top: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    max-width: 200px;
+    min-height: 300px;
   }
 }
 
@@ -283,6 +309,12 @@ h2 {
   }
 }
 
+@media (max-width: 1100px) {
+  h2 {
+    width: 300px;
+  }
+}
+
 article {
   width: 1170px;
   display: flex;
@@ -297,6 +329,14 @@ article {
     height: fit-content;
     gap: 10px;
     padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  article {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -344,6 +384,11 @@ h3 {
   }
 }
 
+@media (max-width: 700px) {
+  h3 {
+    width: 300px;
+  }
+}
 
 #taone {
   width: 450px;
@@ -385,6 +430,22 @@ h3 {
   width: 1170px;
 }
 
+@media (max-width: 1100px) {
+  .sp-bw {
+    width: 700px;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+  .sp-bw {
+    width: 300px;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+
 h4 {
   font-size: 28px;
   font-family: "Red Hat Display", Arial, sans-serif;
@@ -395,12 +456,33 @@ h4 {
 @media (max-width: 1100px) {
   h4 {
     width: 700px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  h4 {
+    width: 300px;
+    margin: auto;
   }
 }
 
 @media (max-width: 1100px) {
   .third {
     display: flex;
+  }
+}
+
+@media (max-width: 700px) {
+  .third {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .last-half {
+    width: 300px;
   }
 }
 
@@ -417,6 +499,12 @@ h4 {
     display: flex;
     height: 20px;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+  .spanito {
+    width: 300px;
   }
 }
 
@@ -471,14 +559,37 @@ span {
   }
 }
 
+@media (max-width: 700px) {
+  p {
+    width: 300px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .last-article {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.last-half {
+  width: 570px;
+}
+
 @media (max-width: 1100px) {
   .last-half>img {
     height: 160px;
   }
 }
 
-.last-half {
-  width: 570px;
+
+
+@media (max-width: 700px) {
+  .last-half {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .load {
@@ -509,10 +620,24 @@ span {
   margin: auto, none;
 }
 
+@media (max-width: 700px) {
+  .container {
+    width: 300px;
+  }
+}
+
 @media (max-width: 1100px) {
   .additional {
     flex-direction: column;
     width: 700px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .additional {
+    flex-direction: column;
+    width: 200px;
     gap: 30px;
   }
 }
@@ -580,9 +705,25 @@ footer {
 }
 
 @media (max-width: 1100px) {
+  .pain-in-the-ass {
+    width: 300px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
   .logos {
     margin: auto;
     width: 700px;
+    padding-bottom: 30px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 700px) {
+  .logos {
+    margin: auto;
+    width: 300px;
     padding-bottom: 30px;
     justify-content: space-around;
   }
